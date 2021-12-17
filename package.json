@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --configuration=development,es",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "i18n": "ng extract-i18n --format=xlf2 --output-path=src/locale && xliffmerge --profile xliffmerge.json en es"
   },
   "private": true,
   "dependencies": {
@@ -26,6 +27,7 @@
     "@angular-devkit/build-angular": "~13.1.2",
     "@angular/cli": "~13.1.2",
     "@angular/compiler-cli": "~13.1.0",
+    "@angular/localize": "~13.1.1",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
     "jasmine-core": "~3.10.0",
@@ -34,6 +36,7 @@
     "karma-coverage": "~2.1.0",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "ngx-i18nsupport": "~0.17.1",
     "typescript": "~4.5.2"
   }
 }

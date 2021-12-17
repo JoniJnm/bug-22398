@@ -16,6 +16,18 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "locales": {
+          "en": {
+            "translation": "src/locale/messages.en.xlf",
+            "baseHref": ""
+          },
+          "es": {
+            "translation": "src/locale/messages.es.xlf",
+            "baseHref": ""
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -64,6 +76,12 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "es": {
+              "localize": ["es"]
+            },
+            "en": {
+              "localize": ["en"]
             }
           },
           "defaultConfiguration": "production"
@@ -76,6 +94,12 @@
             },
             "development": {
               "browserTarget": "bug-22398:build:development"
+            },
+            "es": {
+              "browserTarget": "bug-22398:build:es"
+            },
+            "en": {
+              "browserTarget": "bug-22398:build:en"
             }
           },
           "defaultConfiguration": "development"
